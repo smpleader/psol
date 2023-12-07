@@ -1,4 +1,5 @@
 
+<?php if($this->data['status'] != -2)  : ?>
 <div class="container align-items-center preview-mode mx-auto pt-3">
     <div class="row justify-content-center">
         <div class="col-12">
@@ -19,3 +20,4 @@
         $('#fabric_slide_menu .remove-button').remove();
     });
 </script>
+<?php endif; ?>

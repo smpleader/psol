@@ -6,6 +6,7 @@ $this->theme->prepareAssets([
     'admin-css',
     'js-bootstrap'
 ]);
+$content = $this->render($this->mainLayout);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@ $this->theme->prepareAssets([
 <body>
     <div class="wrap" fluid="xl">
         <div class="content-wrapper m-0">
-            <?php echo $this->render($this->mainLayout) ?>
+            <?php echo $content ?>
         </div>
     </div>
 <?php $this->theme->echo('js', $this->url()); ?>

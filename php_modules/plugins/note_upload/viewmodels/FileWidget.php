@@ -29,8 +29,11 @@ class FileWidget extends ViewModel
     {
         $id = isset($viewData['currentId']) ? $viewData['currentId'] : 0;
         $data = $this->NoteFileModel->getDetail($id);
+        $isImage = $this->NoteFileModel->isImage(PUBLIC_PATH . $data['path']);
+        
         return [
             'data' => $data,
+            'isImage' => $isImage,
         ];
         
     }

@@ -1,1 +1,1 @@
-<?php echo $this->data ? $this->data['data'] : '';?>
+<?php echo $this->data && $this->data['status'] != -2 ? $this->data['data'] : '';?>

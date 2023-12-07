@@ -11,6 +11,7 @@ class Notetype
         return [
             'upload' => [
                 'namespace' => 'App\plugins\note_upload\\',
+                'model' => 'NoteFileModel',
                 'title' => 'Upload'
             ]
         ];

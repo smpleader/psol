@@ -23,7 +23,7 @@ $content = $this->render($this->mainLayout);
     <?php $this->theme->echo('inlineCss', $this->url()) ?>
 </head>
 
-<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+<body data-theme="default" class="d-none" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
     <div class="wrapper">
         <?php echo $this->renderWidget('menu::backend.sidebar'); ?>
         <div class="main">
@@ -37,6 +37,18 @@ $content = $this->render($this->mainLayout);
     </div>
     <?php $this->theme->echo('js', $this->url()) ?>
     <?php $this->theme->echo('inlineJs', $this->url()) ?>
+    <script>
+        if ( window !== window.parent ) 
+        {
+            $('body #sidebar').addClass('d-none');
+            $('body .main nav.navbar').addClass('d-none');
+            $('#form_submit .widget-tag').addClass('d-none');
+            $('#form_submit .widget-assignee').addClass('d-none');
+            $('#form_submit .widget-history').addClass('d-none');
+            $('body .main nav.navbar .sidebar-toggle').addClass('d-none');
+        }
+        $('body ').removeClass('d-none');
+    </script>
 </body>
 
 </html>

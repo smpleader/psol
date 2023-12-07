@@ -47,6 +47,16 @@ class Routing
                     'post' => ['report_manager', 'report_update'],
                 ],
             ],
+            'report/view'=>[
+                'fnc' => [
+                    'get' => 'report.report.preview',
+                ],
+                'parameters' => ['id'],
+                'loadChildPlugin' => true,
+                'permission' => [
+                    'get' => ['report_manager', 'report_read'],
+                ],
+            ],
             'report/find-user'=>[
                 'fnc' => [
                     'get' => 'report.report.findUser',

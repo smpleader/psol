@@ -215,7 +215,7 @@ class NoteFileModel extends Base
         return false;
     }
 
-    public function remove($id)
+    public function remove($id, $hard_delete = false)
     {
         if (!$id)
         {
@@ -223,28 +223,27 @@ class NoteFileModel extends Base
             return false;
         }
 
-        $file = $this->FileEntity->findOne(['note_id' => $id]);
-        if (!$file)
+        if ($hard_delete)
         {
-            $this->error = 'Invalid File';
-            return false;
-        }
-
-        // remove file
-        if (file_exists(PUBLIC_PATH. $file['path']))
-        {
-            if (!unlink(PUBLIC_PATH. $file['path']))
+            $file = $this->FileEntity->findOne(['note_id' => $id]);
+            if ($file)
             {
-                $this->error = 'Can`t remove file';
-                return false;
+                $this->FileEntity->remove($file['id']);
+            }
+    
+            // remove file
+            if ($file && file_exists(PUBLIC_PATH. $file['path']))
+            {
+                if (!unlink(PUBLIC_PATH. $file['path']))
+                {
+                    $this->error = 'Can`t remove file';
+                    return false;
+                }
             }
         }
-
+        
         // remove note
-        $this->FileEntity->remove($file['id']);
-        $try = $this->NoteEntity->remove($id);
-
-        return $try;
+        return true;
     }
 
     public function createFolderSave($dir = '')
