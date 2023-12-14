@@ -4,7 +4,7 @@
     </td>
     <td><a href="<?php echo $this->link_detail . '/' . $this->item['id']; ?>"><?php echo  $this->item['title']  ?></a></td>
     <td><?php echo $this->item['tag_tmp'];?></td>
-    <td class="request_text">
+    <td class="request_text <?php echo $this->item['description'] ? '' : 'none_text'; ?>">
         <?php echo  $this->item['excerpt_description'];  ?>
         <span class="request_fulltext"><?php echo  $this->item['description'];  ?></span>
     </td>

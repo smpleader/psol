@@ -23,6 +23,10 @@
 	visibility: visible;
 }
 
+.request_text.none_text:hover .request_fulltext {
+	visibility: hidden !important;
+}
+
 .request_text .request_fulltext::after {
   	content: " ";
   	position: absolute;
