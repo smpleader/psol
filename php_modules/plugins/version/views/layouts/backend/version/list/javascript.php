@@ -61,6 +61,15 @@
             $('#description').val(description);
             document.getElementById('version_number').innerHTML = version_number;
 
+            // show change logs popup
+            var title = $(this).data('title');
+            var logs = $(this).data('logs');
+            $('#log-modal-title').text(title);
+            $('#log-modal-content').html(logs);
+            console.log(logs);
+
+
+
             $('#save').click(function() {
                 if(id == 0) {
                     $('#form_version').attr('action', '<?php echo $this->link_form; ?>/' + id);
