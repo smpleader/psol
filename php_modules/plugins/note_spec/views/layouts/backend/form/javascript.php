@@ -388,7 +388,7 @@
         $("#note_ajax_load").on('load', function()
         {
             var height = $("#note_ajax_load").contents().find('#form_submit').height();
-            $("#note_ajax_load").height(height + 50);
+            $("#note_ajax_load").height(height + 450);
             if(checkSave)
             {
                 var message = $("#note_ajax_load").contents().find(".message-body.alert-success .toast-body").text();
