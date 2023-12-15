@@ -2,6 +2,7 @@
 namespace App\plugins\psol\report\registers;
 
 use SPT\Application\IApp;
+use SPT\Support\Loader;
 
 class Installer
 {
@@ -31,8 +32,20 @@ class Installer
 
     public static function install( IApp $app)
     {
-        // run sth to prepare the install
+        // load entity
+        $container = $app->getContainer();
+        Loader::findClass( 
+            SPT_PLUGIN_PATH. 'psol/report/entities', 
+            'App\plugins\psol\report\entities', 
+            function($classname, $fullname) use (&$container)
+            {
+                $x = new $fullname($container->get('query'));
+                $x->checkAvailability();
+            });
+
+        return true;
     }
+
     public static function uninstall( IApp $app)
     {
         // run sth to uninstall

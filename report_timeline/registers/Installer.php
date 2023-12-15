@@ -2,17 +2,18 @@
 namespace App\plugins\psol\report_timeline\registers;
 
 use SPT\Application\IApp;
+use SPT\Support\Loader;
 
 class Installer
 {
     public static function info()
     {
-        return ['tags'=>['sdm']];
+        return ['tags'=>['psol']];
     }
     
     public static function name()
     {
-        return 'Plugin report tree of note';
+        return 'Plugin report timeline';
     }
 
     public static function detail()
@@ -20,7 +21,7 @@ class Installer
         return [
             'author' => 'Pham Minh',
             'created_at' => '2023-01-03',
-            'description' => 'Plugin used to demo how the SPT works'
+            'description' => 'Plugin report timeline'
         ];
     }
 
@@ -31,7 +32,18 @@ class Installer
 
     public static function install( IApp $app)
     {
-        // run sth to prepare the install
+        // load entity
+        $container = $app->getContainer();
+        Loader::findClass( 
+            SPT_PLUGIN_PATH. 'psol/report_timeline/entities', 
+            'App\plugins\psol\report_timeline\entities', 
+            function($classname, $fullname) use (&$container)
+            {
+                $x = new $fullname($container->get('query'));
+                $x->checkAvailability();
+            });
+
+        return true;
     }
     public static function uninstall( IApp $app)
     {
