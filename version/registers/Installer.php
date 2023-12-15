@@ -2,6 +2,7 @@
 namespace App\plugins\psol\version\registers;
 
 use SPT\Application\IApp;
+use SPT\Support\Loader;
 
 class Installer
 {
