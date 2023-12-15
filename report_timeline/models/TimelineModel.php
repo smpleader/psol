@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\report_timeline\models;
+namespace App\plugins\psol\report_timeline\models;
 
 use SPT\Container\Client as Base;
 use SPT\Traits\ErrorString;

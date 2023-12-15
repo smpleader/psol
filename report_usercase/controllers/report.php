@@ -1,7 +1,7 @@
 <?php
-namespace App\plugins\report_usercase\controllers;
+namespace App\plugins\psol\report_usercase\controllers;
 
-use App\plugins\report\libraries\ReportController;
+use App\plugins\psol\report\libraries\ReportController;
 
 class report extends ReportController 
 {

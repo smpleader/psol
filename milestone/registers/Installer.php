@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\milestone\registers;
+namespace App\plugins\psol\milestone\registers;
 
 use SPT\Application\IApp;
 

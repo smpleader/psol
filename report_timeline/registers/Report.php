@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\report_timeline\registers;
+namespace App\plugins\psol\report_timeline\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -11,7 +11,7 @@ class Report
         return [
             'timeline' => [
                 'title' => 'Timeline',
-                'namespace' => 'App\plugins\report_timeline\\',
+                'namespace' => 'App\plugins\psol\report_timeline\\',
                 'remove_object' => 'TimelineModel',
             ],
         ];

@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\report_calendar\registers;
+namespace App\plugins\psol\report_calendar\registers;
  
 use SPT\Application\IApp;  
 
@@ -10,7 +10,7 @@ class Dispatcher
         $cName = $app->get('controller');
         $fName = $app->get('function');
 
-        $controller = 'App\plugins\report_calendar\controllers\\'. $cName;
+        $controller = 'App\plugins\psol\report_calendar\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $app->raiseError('Invalid controller '. $cName);

@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\version\registers;
+namespace App\plugins\psol\version\registers;
 
 use SPT\Application\IApp;
 use SPT\Response;
@@ -15,7 +15,7 @@ class Dispatcher
             $app->plgLoad('permission', 'CheckSession');
         }
         
-        $controller = 'App\plugins\version\controllers\\'. $cName;
+        $controller = 'App\plugins\psol\version\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $app->raiseError('Invalid controller '. $cName);

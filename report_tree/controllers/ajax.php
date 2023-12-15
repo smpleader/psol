@@ -8,9 +8,9 @@
  *
  */
 
-namespace App\plugins\report_tree\controllers;
+namespace App\plugins\psol\report_tree\controllers;
 
-use App\plugins\report\libraries\ReportController;
+use App\plugins\psol\report\libraries\ReportController;
 use SPT\Web\ControllerMVVM;
 
 class ajax extends ReportController 

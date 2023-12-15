@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\report_usercase\registers;
+namespace App\plugins\psol\report_usercase\registers;
 
 use SPT\Application\IApp;
 

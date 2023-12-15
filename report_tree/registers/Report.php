@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\report_tree\registers;
+namespace App\plugins\psol\report_tree\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -20,7 +20,7 @@ class Report
         return [
             'tree' => [
                 'title' => 'Tree Of Note',
-                'namespace' => 'App\plugins\report_tree\\',
+                'namespace' => 'App\plugins\psol\report_tree\\',
                 'remove_object' => 'TreePhpModel',
             ],
         ];

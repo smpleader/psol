@@ -1,6 +1,6 @@
 <?php
 
-namespace App\plugins\report_usercase\viewmodels;
+namespace App\plugins\psol\report_usercase\viewmodels;
 
 use SPT\Web\ViewModel;
 use SPT\Web\Gui\Form;

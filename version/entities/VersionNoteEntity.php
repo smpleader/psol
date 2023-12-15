@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\version\entities;
+namespace App\plugins\psol\version\entities;
 
 use SPT\Storage\DB\Entity;
 

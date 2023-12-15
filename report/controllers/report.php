@@ -1,4 +1,4 @@
-<?php namespace App\plugins\report\controllers;
+<?php namespace App\plugins\psol\report\controllers;
 
 use SPT\Web\ControllerMVVM;
 use SPT\Response;

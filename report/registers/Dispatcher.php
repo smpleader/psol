@@ -1,9 +1,9 @@
 <?php
-namespace App\plugins\report\registers;
+namespace App\plugins\psol\report\registers;
 
 use SPT\Application\IApp;
 use SPT\Response;
-use App\plugins\report\libraries\ReportDispatch;
+use App\plugins\psol\report\libraries\ReportDispatch;
 
 class Dispatcher
 {

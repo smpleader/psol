@@ -1,4 +1,4 @@
-<?php namespace App\plugins\milestone\controllers;
+<?php namespace App\plugins\psol\milestone\controllers;
 
 use SPT\Web\ControllerMVVM;
 use SPT\Response;

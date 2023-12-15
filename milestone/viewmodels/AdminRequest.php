@@ -7,7 +7,7 @@
  * @description: Just a basic viewmodel
  * 
  */
-namespace App\plugins\milestone\viewmodels; 
+namespace App\plugins\psol\milestone\viewmodels; 
 
 use SPT\Web\Gui\Form;
 use SPT\Web\Gui\Listing;

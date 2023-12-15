@@ -1,6 +1,6 @@
 <?php
 
-namespace App\plugins\version\registers;
+namespace App\plugins\psol\version\registers;
 
 use SPT\Application\IApp;
 

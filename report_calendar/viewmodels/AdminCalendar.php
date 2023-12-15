@@ -9,7 +9,7 @@
  * 
  */
 
-namespace App\plugins\report_calendar\viewmodels;
+namespace App\plugins\psol\report_calendar\viewmodels;
 
 use SPT\Web\ViewModel;
 use SPT\Web\Gui\Form;

@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\report\registers;
+namespace App\plugins\psol\report\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;

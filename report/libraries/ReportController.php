@@ -8,14 +8,14 @@
  *
  */
 
-namespace App\plugins\report\libraries;
+namespace App\plugins\psol\report\libraries;
 
 use SPT\Web\ControllerMVVM;
 use SPT\Web\ViewModelHelper;
 use SPT\Web\View;
 use SPT\Web\ViewComponent;
 use SPT\Web\Theme;
-use App\plugins\report\libraries\IReportController;
+use App\plugins\psol\report\libraries\IReportController;
 
 class ReportController extends ControllerMVVM implements IReportController
 {

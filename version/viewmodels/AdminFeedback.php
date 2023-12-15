@@ -9,7 +9,7 @@
  * 
  */
 
-namespace App\plugins\version\viewmodels;
+namespace App\plugins\psol\version\viewmodels;
 
 use SPT\Web\Gui\Form;
 use SPT\Web\Gui\Listing;

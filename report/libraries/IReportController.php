@@ -8,7 +8,7 @@
  *
  */
 
-namespace App\plugins\report\libraries;
+namespace App\plugins\psol\report\libraries;
 
 interface IReportController
 {

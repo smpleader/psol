@@ -9,7 +9,7 @@
  * 
  */
 
-namespace App\plugins\report_tree\viewmodels;
+namespace App\plugins\psol\report_tree\viewmodels;
 
 use SPT\Web\ViewModel;
 use SPT\Web\Gui\Form;
