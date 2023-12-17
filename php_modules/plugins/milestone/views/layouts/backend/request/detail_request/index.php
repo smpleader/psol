@@ -7,11 +7,23 @@ echo $this->render('backend.document.form', []);
 echo $this->render('backend.version_latest.list', []);
 ?>
 <style>
-.request_text {
-    position: relative;
+.navbar h2 {
+    width: 100%;
 }
 
-.request_text .request_fulltext {
+.milestone_text {
+    white-space: nowrap;
+}
+
+.request_text {
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    height: 1.2em; 
+    white-space: nowrap;
+}
+
+.request_fulltext {
     visibility: hidden;
     width: 650px;
     background-color: #35414e;
@@ -20,16 +32,12 @@ echo $this->render('backend.version_latest.list', []);
     border-radius: 6px;
     border: 1px solid #fff;
     position: absolute;
-    top: 30px;
-    left: 45px;
+    top: 45px;
+    left: 30%;
     z-index: 1;
 }
 
-.request_text:hover .request_fulltext {
-    visibility: visible;
-}
-
-.request_text .request_fulltext::after {
+.request_fulltext::after {
     content: " ";
     position: absolute;
     top: 0%; 

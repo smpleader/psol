@@ -1,6 +1,15 @@
 <script>
     var new_tags = [];
     $(document).ready(function(){
+
+        $(".request_text").css("maxWidth", $(".navbar h2").width() - $(".note_text").width() - $(".milestone_text").width() - 98);
+
+        $('.request_text').mouseover(function () {
+            $('.request_fulltext').css("visibility", "visible");
+        }).mouseout(function () {
+            $('.request_fulltext').css("visibility", "hidden");
+        });
+
         $('.new-note-popup').on('click', function(e){
             e.preventDefault();
             $('#noteNewModal').modal('show');
