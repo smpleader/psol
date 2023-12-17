@@ -54,13 +54,13 @@
         <div class="modal-content container px-5 py-5">
                 <div class="row g-3 align-items-center">
                     <div class="row">
-                        <div class="mb-3 col-12 mx-auto pt-3">
-                            <h1>Change Logs List</h1>
-							<h2>Request: <span id="log-modal-title"></span></h2>
+                        <div class="col-12 mx-auto pt-3">
+                            <h1>Change Logs</h1>
+							<h3>Request: <span id="log-modal-title"></span></h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="mb-3 col-12 mx-auto">
+                        <div class="col-12 mx-auto">
                             <div class="row">
                                 <div id="log-modal-content" class="col-3 d-flex align-items-center">
                                     
