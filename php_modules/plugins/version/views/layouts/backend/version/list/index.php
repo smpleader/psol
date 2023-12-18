@@ -55,8 +55,7 @@
                 <div class="row g-3 align-items-center">
                     <div class="row">
                         <div class="col-12 mx-auto pt-3">
-                            <h1>Change Logs</h1>
-							<h3>Request: <span id="log-modal-title"></span></h3>
+                            <h1>Change Logs: <span id="log-modal-title"></span></h1>
                         </div>
                     </div>
                     <div class="row">
