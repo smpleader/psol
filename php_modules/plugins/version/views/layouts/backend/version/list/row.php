@@ -24,8 +24,25 @@
     </td>
     <td>
         <?php 
-        if($this->get_log){
-            foreach($this->get_log as $log)  {
+        $logs = $this->get_log;
+        if(count($logs) > 3){
+            $logs_list = '<ul>';
+            foreach($logs as $log)  {
+                if($log['version_id'] == $this->item['id']){
+                    $logs_list .= '<li>' . $log['log'] . '</li>';
+                }
+            }
+            $logs_list .= '</ul>';
+ 
+            echo '<a href="#" class="show_data" data-logs="' . $logs_list . '" data-title="' . $this->item['name'] .'" data-bs-placement="top" data-bs-toggle="modal" data-bs-target="#showChangeLogsModal">';
+            for ($i=0;$i<3;$i++) {
+                if($logs[$i]['version_id'] == $this->item['id']){
+                    echo '<span>'. '- ' . $logs[$i]['log'] . '</span> <br>'; 
+                }
+            }
+            echo '...';
+        } else {
+            foreach($logs as $log)  {
                 if($log['version_id'] == $this->item['id']){
                     echo '<span>'. '- ' . $log['log'] . '</span> <br>'; 
                 }
