@@ -13,7 +13,7 @@
             manualColumnResize: true,
             manualRowResize: true,
             colHeaders: myHeaders,
-            rowHeaders: true,
+            rowHeaders: false,
             data: tableData,
             colWidths: 200,
             height: 'auto',

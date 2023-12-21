@@ -133,16 +133,15 @@
         var data = $('#table_data').val() ? JSON.parse($('#table_data').val()) : '';
 
         const container = document.querySelector('#note-table');
-        var myHeaders = data ? data['colHeaders'] : ['', ''];
-        var tableData = data ? data['data'] : [['', ''], ['', '']];
-        var rowHeaders = data ? true : false;
+        var myHeaders = data ? data['colHeaders'] : ['', '', '', ''];
+        var tableData = data ? data['data'] : [['', '', '', ''], ['', '', '', ''], ['', '', '', ''], ['', '', '', ''], ['', '', '', '']];
 
         const table = new Handsontable(container, {
             contextMenu: true,
             manualColumnResize: true,
             manualRowResize: true,
             colHeaders: myHeaders,
-            rowHeaders: rowHeaders,
+            rowHeaders: true,
             data: tableData,
             colWidths: 200,
             height: 'auto',
@@ -151,6 +150,14 @@
                 return cellProp
             },
             licenseKey: 'non-commercial-and-evaluation'
+        });
+
+        table.addHook('beforeOnCellMouseDown', function(e, coords, th) {
+            if(e.button === 2 && coords.row === -1){
+                this.selectColumns(coords.col);
+                this.selectRows(coords.row);
+                this.menu.open();
+            }
         });
 
         table.addHook('afterOnCellMouseDown', function(e, coords, th) {
