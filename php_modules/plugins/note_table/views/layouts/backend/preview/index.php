@@ -1,4 +1,7 @@
-<?php echo $this->renderWidget('core::notification'); ?>
+<?php 
+    $this->theme->add($this->url . 'assets/css/handsontable.full.min.css', '', 'handsontable-css');
+    $this->theme->add($this->url . 'assets/js/handsontable.full.min.js', '', 'bootstrap-handsontable');
+    echo $this->renderWidget('core::notification'); ?>
 <div class="container-fluid align-items-center row justify-content-center mx-auto pt-3">
     <div class="row justify-content-center">
         <div class="col-lg-12 col-sm-12">
@@ -7,6 +10,5 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" /> 
+
 <?php echo $this->render('backend.preview.javascript'); ?>

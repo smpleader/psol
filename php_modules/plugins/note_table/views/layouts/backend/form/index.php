@@ -1,4 +1,7 @@
-<?php echo $this->renderWidget('core::notification'); ?>
+<?php
+    $this->theme->add($this->url . 'assets/css/handsontable.full.min.css', '', 'handsontable-css');
+    $this->theme->add($this->url . 'assets/js/handsontable.full.min.js', '', 'bootstrap-handsontable');
+    echo $this->renderWidget('core::notification'); ?>
 <style>
     .col-header-input:focus {
         border-radius: 0px !important;
@@ -96,6 +99,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" /> 
 <?php echo $this->render('backend.form.javascript'); ?>

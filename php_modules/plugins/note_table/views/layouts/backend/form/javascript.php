@@ -152,11 +152,39 @@
             licenseKey: 'non-commercial-and-evaluation'
         });
 
+        table.addHook('afterCreateCol', function(col, amount) {
+            setTimeout(() => {
+                console.log(this.getColHeader());
+                let colHeader = this.getColHeader();
+
+                this.updateSettings({
+                    colHeaders: function(index) {
+                        return index === col ? '' : colHeader[index];
+                    }
+                });
+            });
+        });
+
         table.addHook('beforeOnCellMouseDown', function(e, coords, th) {
+            // open context menu when right click on header
             if(e.button === 2 && coords.row === -1){
                 this.selectColumns(coords.col);
                 this.selectRows(coords.row);
                 this.menu.open();
+            }
+
+            // not allow remove row when exist only 1 row
+            if(e.button === 2 && this.countRows() === 1) {
+                this.updateSettings({
+                    allowRemoveRow: false
+                });
+            }
+            
+            // not allow remove col when exist only 1 col
+            if(e.button === 2 && this.countCols() === 1) {
+                this.updateSettings({
+                    allowRemoveColumn: false
+                });
             }
         });
 
