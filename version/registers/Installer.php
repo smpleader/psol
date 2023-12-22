@@ -46,7 +46,17 @@ class Installer
     }
     public static function uninstall( IApp $app)
     {
-        // run sth to uninstall
+        $container = $app->getContainer();
+        Loader::findClass( 
+            SPT_PLUGIN_PATH. 'psol/version/entities', 
+            'App\plugins\psol\version\entities', 
+            function($classname, $fullname) use (&$container)
+            {
+                $x = new $fullname($container->get('query'));
+                $x->dropTable();
+            });
+
+        return true;
     }
     public static function active( IApp $app)
     {
