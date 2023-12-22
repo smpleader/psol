@@ -26,7 +26,7 @@
             manualColumnResize: true,
             manualRowResize: true,
             colHeaders: myHeaders,
-            rowHeaders: false,
+            rowHeaders: true,
             data: tableData,
             colWidths: 200,
             height: 'auto',

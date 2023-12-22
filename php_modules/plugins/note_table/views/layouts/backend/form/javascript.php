@@ -189,7 +189,7 @@
         });
 
         table.addHook('afterOnCellMouseDown', function(e, coords, th) {
-            if (coords.row === -1) {
+            if (coords.row === -1 && coords.col > -1) {
                 let input = document.createElement('input'),
                     rect = th.getBoundingClientRect();
 
