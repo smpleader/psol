@@ -38,4 +38,11 @@ class AdminNoteTest extends TestCase
 
         $this->assertIsArray($try);
     }
+
+    public function testPreview()
+    {
+        $try = $this->AdminNote->preview();
+
+        $this->assertIsArray($try);
+    }
 }
