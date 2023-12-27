@@ -1,6 +1,6 @@
 <?php
 
-namespace App\plugins\psol\report_timeline\registers;
+namespace App\psol\report_timeline\registers;
 
 use SPT\Application\IApp;
 

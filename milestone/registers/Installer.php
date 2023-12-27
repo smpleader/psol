@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\milestone\registers;
+namespace App\psol\milestone\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -36,7 +36,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/milestone/entities', 
-            'App\plugins\psol\milestone\entities', 
+            'App\psol\milestone\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));
@@ -50,7 +50,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/milestone/entities', 
-            'App\plugins\psol\milestone\entities', 
+            'App\psol\milestone\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));

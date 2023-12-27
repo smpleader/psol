@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\milestone\registers;
+namespace App\psol\milestone\registers;
 
 use SPT\Application\IApp;
 use SPT\Response;
@@ -16,7 +16,7 @@ class Dispatcher
 
         $app->set('theme', $app->cf('adminTheme'));
 
-        $controller = 'App\plugins\psol\milestone\controllers\\'. $cName;
+        $controller = 'App\psol\milestone\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $app->raiseError('Invalid controller '. $cName);

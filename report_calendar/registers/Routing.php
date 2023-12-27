@@ -1,6 +1,6 @@
 <?php
 
-namespace App\plugins\psol\report_calendar\registers;
+namespace App\psol\report_calendar\registers;
 
 use SPT\Application\IApp;
 

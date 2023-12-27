@@ -9,7 +9,7 @@
  * 
  */
 
-namespace App\plugins\psol\report\models;
+namespace App\psol\report\models;
 
 use SPT\Container\Client as Base;
 use SPT\Traits\ErrorString;

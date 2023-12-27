@@ -9,7 +9,7 @@
  * 
  */
 
-namespace App\plugins\psol\report_timeline\viewmodels;
+namespace App\psol\report_timeline\viewmodels;
 
 use SPT\Web\ViewModel;
 use SPT\Web\Gui\Form;

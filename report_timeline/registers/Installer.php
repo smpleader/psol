@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_timeline\registers;
+namespace App\psol\report_timeline\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -36,7 +36,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/report_timeline/entities', 
-            'App\plugins\psol\report_timeline\entities', 
+            'App\psol\report_timeline\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));
@@ -51,7 +51,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/report_timeline/entities', 
-            'App\plugins\psol\report_timeline\entities', 
+            'App\psol\report_timeline\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));

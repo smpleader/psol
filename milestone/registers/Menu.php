@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\milestone\registers;
+namespace App\psol\milestone\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;

@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_usercase\registers;
+namespace App\psol\report_usercase\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -20,7 +20,7 @@ class Report
         return [
             'usercase' => [
                 'title' => 'Usercase Diagram',
-                'namespace' => 'App\plugins\psol\report_usercase\\',
+                'namespace' => 'App\psol\report_usercase\\',
                 'remove_object' => 'UserCaseModel',
             ],
         ];

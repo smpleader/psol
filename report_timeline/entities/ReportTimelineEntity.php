@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\report_timeline\entities;
+namespace App\psol\report_timeline\entities;
 
 use SPT\Storage\DB\Entity;
 

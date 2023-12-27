@@ -8,9 +8,9 @@
  *
  */
 
-namespace App\plugins\psol\report_calendar\controllers;
+namespace App\psol\report_calendar\controllers;
 
-use App\plugins\psol\report\libraries\ReportController;
+use App\psol\report\libraries\ReportController;
 use SPT\Web\ControllerMVVM;
 
 class report extends ReportController 

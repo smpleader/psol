@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\version\models;
+namespace App\psol\version\models;
 
 use SPT\Container\Client as Base;
 

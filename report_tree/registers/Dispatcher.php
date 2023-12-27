@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_tree\registers;
+namespace App\psol\report_tree\registers;
 
 use SPT\Application\IApp; 
 use SPT\File;
@@ -14,7 +14,7 @@ class Dispatcher
         $fName = $app->get('function');
         // prepare note
 
-        $controller = 'App\plugins\psol\report_tree\controllers\\'. $cName;
+        $controller = 'App\psol\report_tree\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $app->raiseError('Invalid controller '. $cName);

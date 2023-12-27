@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\milestone\entities;
+namespace App\psol\milestone\entities;
 
 use SPT\Storage\DB\Entity;
 

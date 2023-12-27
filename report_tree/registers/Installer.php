@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_tree\registers;
+namespace App\psol\report_tree\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -35,7 +35,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/report_tree/entities', 
-            'App\plugins\psol\report_tree\entities', 
+            'App\psol\report_tree\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));
@@ -50,7 +50,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/report_tree/entities', 
-            'App\plugins\psol\report_tree\entities', 
+            'App\psol\report_tree\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));

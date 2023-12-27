@@ -8,9 +8,9 @@
  *
  */
 
-namespace App\plugins\psol\report_timeline\controllers;
+namespace App\psol\report_timeline\controllers;
 
-use App\plugins\psol\report\libraries\ReportController;
+use App\psol\report\libraries\ReportController;
 use SPT\Web\ControllerMVVM;
 
 class report extends ReportController 

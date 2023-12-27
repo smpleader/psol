@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_calendar\registers;
+namespace App\psol\report_calendar\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -11,7 +11,7 @@ class Report
         return [
             'calendar' => [
                 'title' => 'Calendar',
-                'namespace' => 'App\plugins\psol\report_calendar\\',
+                'namespace' => 'App\psol\report_calendar\\',
                 'remove_object' => 'CalendarModel',
             ],
         ];

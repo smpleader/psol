@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\report_calendar\entities;
+namespace App\psol\report_calendar\entities;
 
 use SPT\Storage\DB\Entity;
 

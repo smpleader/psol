@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\report_calendar\models;
+namespace App\psol\report_calendar\models;
 
 use SPT\Container\Client as Base;
 use SPT\Traits\ErrorString;

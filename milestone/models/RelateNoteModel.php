@@ -8,7 +8,7 @@
  * 
  */
 
-namespace App\plugins\psol\milestone\models;
+namespace App\psol\milestone\models;
 
 use SPT\Container\Client as Base;
 

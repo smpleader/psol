@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_usercase\models;
+namespace App\psol\report_usercase\models;
 
 use SPT\Container\Client as Base; 
 

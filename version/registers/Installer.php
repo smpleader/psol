@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\version\registers;
+namespace App\psol\version\registers;
 
 use SPT\Application\IApp;
 use SPT\Support\Loader;
@@ -35,7 +35,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/version/entities', 
-            'App\plugins\psol\version\entities', 
+            'App\psol\version\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));
@@ -49,7 +49,7 @@ class Installer
         $container = $app->getContainer();
         Loader::findClass( 
             SPT_PLUGIN_PATH. 'psol/version/entities', 
-            'App\plugins\psol\version\entities', 
+            'App\psol\version\entities', 
             function($classname, $fullname) use (&$container)
             {
                 $x = new $fullname($container->get('query'));

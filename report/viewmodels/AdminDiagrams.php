@@ -7,7 +7,7 @@
  * @description: Just a basic viewmodel
  * 
  */
-namespace App\plugins\psol\report\viewmodels; 
+namespace App\psol\report\viewmodels; 
 
 use SPT\Web\Gui\Form;
 use SPT\Web\Gui\Listing;

@@ -1,5 +1,5 @@
 <?php
-namespace App\plugins\psol\report_usercase\registers;
+namespace App\psol\report_usercase\registers;
 
 use SPT\Application\IApp;
 use SPT\Response;
@@ -12,7 +12,7 @@ class Dispatcher
         $cName = $app->get('controller');
         $fName = $app->get('function');
 
-        $controller = 'App\plugins\psol\report_usercase\controllers\\'. $cName;
+        $controller = 'App\psol\report_usercase\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $app->raiseError('Invalid controller '. $cName);

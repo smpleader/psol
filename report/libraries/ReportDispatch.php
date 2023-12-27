@@ -8,12 +8,12 @@
  *
  */
 
-namespace App\plugins\psol\report\libraries;
+namespace App\psol\report\libraries;
 
 use SPT\Application\IApp;
 use SPT\Container\Client as Base;
 use SPT\Support\Filter;
-use App\plugins\psol\report\libraries\IReportController;
+use App\psol\report\libraries\IReportController;
 
 class ReportDispatch extends Base
 {
@@ -28,7 +28,7 @@ class ReportDispatch extends Base
 
     private function process($cName, $fName)
     {
-        $controller = 'App\plugins\psol\report\controllers\\'. $cName;
+        $controller = 'App\psol\report\controllers\\'. $cName;
         if(!class_exists($controller))
         {
             $this->app->raiseError('Invalid controller '. $cName);
