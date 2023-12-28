@@ -17,7 +17,15 @@ class database extends ControllerMVVM
 {
     public function convert_data_notes()
     {
-        $this->ConvertToolModel->convertDataNotes();
+        $try = $this->ConvertToolModel->convertDataNotes();
+        if ($try) 
+        {
+            echo "Convert data note table successfully.\n";
+        } else
+        {
+            echo $this->DbToolModel->getError(). "\n";
+            echo "Convert data note table failed.";
+        }
         return;
     }
 }
