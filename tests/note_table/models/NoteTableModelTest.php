@@ -15,22 +15,30 @@ class NoteTableModelTest extends TestCase
 
         $this->NoteTableModel = $container->get('NoteTableModel');
         $NoteEntity = $container->get('NoteEntity');
+        $HistoryEntity = $container->get('HistoryEntity');
 
         if (!static::$data)
         {
-            $find = $NoteEntity->findOne(['title' => 'test table']);
-            if ($find)
+            $history = $HistoryEntity->findByPK(1);
+            if (!$history)
             {
-                $NoteEntity->remove($find['id']);
+                $try = $HistoryEntity->add([
+                    'id' => 1,
+                    'object_id' => 1,
+                    'object' => 'request',
+                    'data' => '{"colHeaders":["test"],"data":[["test"]]}',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'created_by' => 1,
+                ]);
             }
 
-            $find = $NoteEntity->findByPK(2);
-            if(!$find)
+            $note_table = $NoteEntity->findByPK(1);
+            if(!$note_table)
             {
                 $NoteEntity->add([
                     'title' => 'test table',
                     'public_id' => '',
-                    'id' => 2,
+                    'id' => 1,
                     'alias' => '',
                     'data' => '{"colHeaders":["test"],"data":[["test"]]}',
                     'tags' => '',
@@ -68,14 +76,14 @@ class NoteTableModelTest extends TestCase
         return [
             [[
                 'title' => '', 
-                'data' => 'test table', 
+                'data' => '{"colHeaders":["test"],"data":[["test"]]}',
                 'tags' => [], 
                 'notice' => '', 
                 'status' => 0, 
             ], false],
             [[
                 'title' => 'test table', 
-                'data' => 'test table', 
+                'data' => '{"colHeaders":["test"],"data":[["test"]]}',
                 'tags' => [], 
                 'notice' => '', 
                 'status' => 0, 
@@ -105,7 +113,7 @@ class NoteTableModelTest extends TestCase
                 'status' => 0, 
             ], false],
             [[
-                'id' => 3,
+                'id' => 1,
                 'title' => '', 
                 'data' => 'test table', 
                 'structure' => '{"colHeaders":["test"],"data":[["test"]]}',
@@ -114,7 +122,7 @@ class NoteTableModelTest extends TestCase
                 'status' => 0,          
             ], false],
             [[
-                'id' => 3,
+                'id' => 1,
                 'title' => 'test table', 
                 'data' => 'test table', 
                 'structure' => '{"colHeaders":["test"],"data":[["test"]]}',
@@ -122,23 +130,6 @@ class NoteTableModelTest extends TestCase
                 'notice' => '', 
                 'status' => 0, 
             ], true],
-        ];
-    }
-
-    /**
-     * @dataProvider dataRemove
-     */
-    public function testRemove($id, $result)
-    {
-        $try = $this->NoteTableModel->remove($id);
-        $this->assertEquals($try , $result);
-    }
-
-    public function dataRemove()
-    {
-        return [
-            [0, false],
-            [2, true],
         ];
     }
 
@@ -156,7 +147,7 @@ class NoteTableModelTest extends TestCase
     {
         return [
             [0, true],
-            [2, true],
+            [1, true],
         ];
     }
 
@@ -173,7 +164,7 @@ class NoteTableModelTest extends TestCase
     {
         return [
             [0, false],
-            [3, true],
+            [1, true],
         ];
     }
 
@@ -190,6 +181,23 @@ class NoteTableModelTest extends TestCase
     {
         return [
             ['test', 'XYZ', []],
+        ];
+    }
+
+    /**
+     * @dataProvider dataRemove
+     */
+    public function testRemove($id, $result)
+    {
+        $try = $this->NoteTableModel->remove($id);
+        $this->assertEquals($try , $result);
+    }
+
+    public function dataRemove()
+    {
+        return [
+            [0, false],
+            [1, true],
         ];
     }
 }
