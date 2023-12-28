@@ -32,9 +32,15 @@
             height: 'auto',
             cells: function(row, col, prop) {
                 var cellProp = {};
+                cellProp.renderer = htmlRenderer;
                 return cellProp
             },
             licenseKey: 'non-commercial-and-evaluation'
         });
+
+        function htmlRenderer(instance, td, row, col, prop, value, cellProperties) {
+            Handsontable.renderers.HtmlRenderer.apply(this, arguments);
+            td.innerHTML = value;
+        }
     });
 </script>
