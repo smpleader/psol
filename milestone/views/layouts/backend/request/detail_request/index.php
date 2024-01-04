@@ -6,6 +6,48 @@ $this->theme->add($this->url . 'assets/js/select2.full.min.js', '', 'bootstrap-s
 echo $this->render('backend.document.form', []);
 echo $this->render('backend.version_latest.list', []);
 ?>
+<style>
+.navbar h2 {
+    width: 100%;
+}
+
+.milestone_text {
+    white-space: nowrap;
+}
+
+.request_text {
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    height: 1.2em; 
+    white-space: nowrap;
+}
+
+.request_fulltext {
+    visibility: hidden;
+    width: 650px;
+    background-color: #35414e;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 45px;
+    left: 30%;
+    z-index: 1;
+}
+
+.request_fulltext::after {
+    content: " ";
+    position: absolute;
+    top: 0%; 
+    left: 0%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #35414e transparent transparent transparent;
+}
+</style>
 <div class="toast message-toast" id="message_ajax">
     <div id="message_form" class="d-flex message-body ">
         <div class="toast-body">

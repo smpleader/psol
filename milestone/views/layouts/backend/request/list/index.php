@@ -1,4 +1,43 @@
 <?php echo $this->renderWidget('core::notification'); ?>
+<style>
+.request_text {
+	position: relative;
+}
+
+.request_text .request_fulltext {
+	visibility: hidden;
+	width: 450px;
+	background-color: #35414e;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	border: 1px solid #fff;
+	position: absolute;
+	top: 50px;
+  	left: 15px;
+  	z-index: 1;
+}
+
+.request_text:hover .request_fulltext {
+	visibility: visible;
+}
+
+.request_text.none_text:hover .request_fulltext {
+	visibility: hidden !important;
+}
+
+.request_text .request_fulltext::after {
+  	content: " ";
+  	position: absolute;
+  	top: 0%;
+  	left: 0%;
+  	margin-left: -5px;
+  	border-width: 5px;
+  	border-style: solid;
+  	border-color: #35414e transparent transparent transparent;
+}
+</style>
 <div class="main">
 	<main class="content p-0 ">
 		<div class="container-fluid p-0">

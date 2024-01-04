@@ -27,34 +27,34 @@ class Menu
                 
             }
         }
-        if ($check && $allow_request)
-        {
-            $request = $container->get('request');
-            $version = $container->exists('VersionEntity') ? $container->get('VersionEntity') : null;
-            $app->set('menu_type', 'request_menu');
-            $urlVars = $request->get('urlVars', []);
-            $request_id = (int) $urlVars['request_id'] ?? 0;
-            $menu = [];
+        // if ($check && $allow_request)
+        // {
+        //     $request = $container->get('request');
+        //     $version = $container->exists('VersionEntity') ? $container->get('VersionEntity') : null;
+        //     $app->set('menu_type', 'request_menu');
+        //     $urlVars = $request->get('urlVars', []);
+        //     $request_id = (int) $urlVars['request_id'] ?? 0;
+        //     $menu = [];
 
-            $menu = [
-                [
-                    'link' => $router->url('detail-request/'. $request_id.'#relate_note_link'),
-                    'title' => 'Relate Notes',
-                    'icon' => '<i class="fa-solid fa-link"></i>',
-                    'class' => 'relate-note-popup',
-                ],
-                [
-                    'link' => $router->url('detail-request/'. $request_id),
-                    'title' => 'New Note',
-                    'icon' => '<i class="fa-solid fa-clipboard"></i>',
-                    'class' => 'new-note-popup',
-                ],
-            ];
+        //     $menu = [
+        //         [
+        //             'link' => $router->url('detail-request/'. $request_id.'#relate_note_link'),
+        //             'title' => 'Relate Notes',
+        //             'icon' => '<i class="fa-solid fa-link"></i>',
+        //             'class' => 'relate-note-popup',
+        //         ],
+        //         [
+        //             'link' => $router->url('detail-request/'. $request_id),
+        //             'title' => 'New Note',
+        //             'icon' => '<i class="fa-solid fa-clipboard"></i>',
+        //             'class' => 'new-note-popup',
+        //         ],
+        //     ];
             
-            return [
-                'request_menu' => $menu,
-            ];
-        }
+        //     return [
+        //         'request_menu' => $menu,
+        //     ];
+        // }
 
         $list = $entity->list(0, 0, ['status = 1']);
         $menu = [];

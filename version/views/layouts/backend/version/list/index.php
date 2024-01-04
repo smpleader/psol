@@ -49,6 +49,27 @@
 		</div>
 	</main>
 
+<div class="modal fade" id="showChangeLogsModal" aria-labelledby="showChangeLogsModal" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered " style="max-width: 600px;">
+        <div class="modal-content container px-5 py-5">
+                <div class="row g-3 align-items-center">
+                    <div class="row">
+                        <div class="col-12 mx-auto pt-3">
+                            <h1>Change Logs: <span id="log-modal-title"></span></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mx-auto">
+                            <div class="row">
+                                <div id="log-modal-content" class="col-3 d-flex align-items-center">
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 </div>
