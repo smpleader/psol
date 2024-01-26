@@ -8,7 +8,7 @@ echo $this->render('backend.version_latest.list', []);
 ?>
 <style>
 .navbar h2 {
-    width: 100%;
+    width: calc(100% - 40px);
 }
 
 .milestone_text {
@@ -46,6 +46,15 @@ echo $this->render('backend.version_latest.list', []);
     border-width: 5px;
     border-style: solid;
     border-color: #35414e transparent transparent transparent;
+}
+
+#edit-request {
+    margin-right: 15px;
+}
+
+.cancel_request {
+    margin-right: 0;
+    margin-left: auto;
 }
 </style>
 <div class="toast message-toast" id="message_ajax">
