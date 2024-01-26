@@ -53,7 +53,6 @@
 									</th>
 									<th>Title Note</th>
 									<th>Alias</th>
-									<th>Description</th>
 									<th>Tags</th>
 									<th></th>
 								</tr>
