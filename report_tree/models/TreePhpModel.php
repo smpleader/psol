@@ -21,7 +21,9 @@ class TreePhpModel extends Base
     public function getTree($id)
     {
         $list = $this->TreeStructureEntity->list(0, 0, ['diagram_id ='.$id], 'tree_left asc');
+
         $removes = [];
+
         foreach($list as &$item)
         {
             if (in_array($item['id'], $removes))
@@ -30,7 +32,10 @@ class TreePhpModel extends Base
                 continue;
             }
 
-            $note = $this->Note->findByPK($item['note_id']);
+
+            $note = $this->NoteEntity->findByPK($item['note_id']);
+
+
             if (!$note)
             {
                 $removes[] = $item['id'];
@@ -41,6 +46,7 @@ class TreePhpModel extends Base
                 $item['title'] = $note['title'];
             }
         }
+
 
         if ($removes)
         {
@@ -239,6 +245,7 @@ class TreePhpModel extends Base
         }
 
         $find = $this->ReportEntity->findByPK($id);
+
         if (!$find)
         {
             $this->error = 'Invalid report';
@@ -246,6 +253,7 @@ class TreePhpModel extends Base
         }
 
         $list_tree = $this->getTree($id);
+
         $find['list_tree'] = $list_tree;
         $ignore = [];
 
