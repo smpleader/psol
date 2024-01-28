@@ -88,4 +88,52 @@ class report extends ControllerMVVM
 
         return $id;
     }
+
+    public function findUser()
+    {
+        $search = trim($this->request->get->get('search', '', 'string'));
+
+        $where = [];
+
+        if( !empty($search) )
+        {
+            $query_search = "(`name` LIKE '%".$search."%' ) OR (`email` LIKE '%".$search."%' ) OR (`username` LIKE '%".$search."%' )";
+        }
+
+        $user_access = $this->PermissionModel->getAccessByUser();
+
+        if (in_array('user_manager', $user_access)) {
+            $where[] = $query_search;
+        } else {
+            $group_ids = $this->UserGroupEntity->list(0,0,['user_id = ' . $this->user->get('id')]);
+            $group_id_arr = '(';
+            foreach ($group_ids as $idx => $group) {
+                if ($idx != 0) {
+                    $group_id_arr .= ',';
+                }
+                $group_id_arr .= $group['group_id'];
+            }
+            $group_id_arr .= ')';
+
+            $user_ids = $this->UserGroupEntity->list(0,0,['group_id IN ' . $group_id_arr]);
+            $user_id_arr = '(';
+            if (is_array($user_ids)) {
+                foreach ($user_ids as $idx => $user) {
+                    if ($idx != 0) {
+                        $user_id_arr .= ',';
+                    }
+                    $user_id_arr .= $user['user_id'];
+                }
+            }
+            $user_id_arr .= ')';
+            $where[] = "(`id` IN ". $user_id_arr .") AND (". $query_search .")";
+        }
+        $users = $this->UserEntity->list(0, 0, $where);
+        
+        $this->app->set('format', 'json');
+        $this->set('status' , 'success');
+        $this->set('data' , $users);
+        $this->set('message' , '');
+        return;
+    }
 }
