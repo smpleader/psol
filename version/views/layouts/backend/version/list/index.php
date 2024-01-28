@@ -1,4 +1,18 @@
 <?php echo $this->renderWidget('core::notification'); ?>
+<style>
+#log-modal-content ul {
+	max-width: 100%;
+}
+#log-modal-content ul li {
+	overflow-wrap: break-word;
+}
+table tr td {
+	max-width: 200px;
+}
+table tr td .show_data span {
+	overflow-wrap: break-word;
+}
+</style>
 <div class="main">
 	<main class="content p-0 ">
 		<div class="container-fluid p-0">
@@ -61,7 +75,7 @@
                     <div class="row">
                         <div class="col-12 mx-auto">
                             <div class="row">
-                                <div id="log-modal-content" class="col-3 d-flex align-items-center">
+                                <div id="log-modal-content" class="d-flex align-items-center">
 
                                 </div>
                             </div>
