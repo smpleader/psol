@@ -35,6 +35,15 @@ class Routing
                     'post' => ['report_manager', 'report_create'],
                 ],
             ],
+            'report' => [
+                'fnc' => [
+                    'put' => 'report.report.update'
+                ],
+                'parameters' => ['id'],
+                'permission' => [
+                    'post' => ['report_manager', 'report_update'],
+                ],
+            ],
             'report/detail'=>[
                 'fnc' => [
                     'get' => 'report.report.detail',

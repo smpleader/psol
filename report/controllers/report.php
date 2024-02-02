@@ -37,6 +37,32 @@ class report extends ControllerMVVM
         );
     }
 
+    public function update()
+    {
+        $ids = $this->validateID(); 
+        $link = 'reports';
+
+        if(is_numeric($ids) && $ids)
+        {
+            $data = [
+                'title' => $this->request->post->get('title', '', 'string'),
+                'id' => $ids,
+                'modified_by' => $this->user->get('id'),
+                'modified_at' => date('Y-m-d H:i:s')
+            ];
+            $assignment = $this->request->post->get('assignment', [], 'array');
+
+            $data['assignment'] = "[" . implode(",", $assignment) . "]";
+            $try = $this->ReportEntity->update($data);
+            
+            $msg = $try ? 'Edit Successfully!' : 'Error: '. $this->ReportEntity->getError();
+            $this->session->set('flashMsg', $msg);
+            return $this->app->redirect(
+                $this->router->url($link)
+            );
+        }
+    }
+
     public function delete()
     {
         $ids = $this->validateID();
