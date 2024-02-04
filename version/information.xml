@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<information>
+	<tag>etadoc</tag>
+	<type>plugin</type>
+	<solution>psol</solution>
+	<folder_name>version</folder_name>
+	<name>Plugin version</name>
+	<require></require>
+</information>

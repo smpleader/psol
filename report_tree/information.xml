@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<information>
+	<tag>psol</tag>
+	<type>plugin</type>
+	<solution>psol</solution>
+	<folder_name>report_tree</folder_name>
+	<name>Plugin report tree of note</name>
+	<require></require>
+</information>
+			
