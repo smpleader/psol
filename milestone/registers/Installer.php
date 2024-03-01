@@ -8,7 +8,14 @@ class Installer
 {
     public static function info()
     {
-        return ['tags'=>['psol']];
+        return [
+            'tags'=>['psol'],
+            'type' => 'plugin',
+            'solution' => 'psol',
+            'folder_name' => 'milestone',
+            'name' => 'Plugin milestone',
+            'require' => []
+        ];
     }
 
     public static function name()

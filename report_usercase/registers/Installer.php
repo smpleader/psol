@@ -11,7 +11,12 @@ class Installer
             'author' => 'Pham Minh',
             'created_at' => '2023-01-03',
             'description' => 'Plugin used to for report',
-            'tags' => ['etadoc']
+            'tags' => ['etadoc'],
+            'type' => 'plugin',
+            'solution' => 'psol',
+            'folder_name' => 'report_usercase',
+            'name' => 'Plugin report usercase',
+            'require' => []
         ];
     }
     

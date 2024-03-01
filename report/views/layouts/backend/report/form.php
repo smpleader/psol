@@ -20,8 +20,7 @@ $this->theme->add($this->url . 'assets/js/select2.full.min.js', '', 'bootstrap-s
                             <label class="form-label fw-bold mb-2">Assignment</label>
                         </div>
                         <div class="col-12">
-                            <select class="" multiple id="assignment" name="assignment[]">
-                            </select>
+                            <?php $this->ui->field('assignment'); ?>
                         </div>
                     </div>
                     <div class="row g-3 align-items-center m-0">

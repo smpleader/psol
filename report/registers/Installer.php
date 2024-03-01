@@ -8,7 +8,14 @@ class Installer
 {
     public static function info()
     {
-        return ['tags'=>['sdm']];
+        return [
+            'tags'=>['sdm'],
+            'type' => 'plugin',
+            'solution' => 'psol',
+            'folder_name' => 'report',
+            'name' => 'Plugin report',
+            'require' => []
+        ];
     }
     
     public static function name()
