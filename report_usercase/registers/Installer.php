@@ -16,7 +16,9 @@ class Installer
             'solution' => 'psol',
             'folder_name' => 'report_usercase',
             'name' => 'Plugin report usercase',
-            'require' => []
+            'dependencies' => [
+                'pnote'
+            ]
         ];
     }
     

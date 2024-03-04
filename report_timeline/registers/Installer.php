@@ -14,7 +14,9 @@ class Installer
             'solution' => 'psol',
             'folder_name' => 'report_timeline',
             'name' => 'Plugin report timeline',
-            'require' => []
+            'dependencies' => [
+                'pnote'
+            ]
         ];
     }
     

@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'milestone',
     'name' => 'Plugin milestone',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];

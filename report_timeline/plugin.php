@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'report_timeline',
     'name' => 'Plugin report timeline',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];
