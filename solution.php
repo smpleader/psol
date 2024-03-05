@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'psol',
     'name' => 'Solution PSol',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];

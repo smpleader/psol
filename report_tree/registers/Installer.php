@@ -14,7 +14,9 @@ class Installer
             'solution' => 'psol',
             'folder_name' => 'report_tree',
             'name' => 'Plugin report tree of note',
-            'require' => []
+            'dependencies' => [
+                'pnote'
+            ]
         ];
     }
     

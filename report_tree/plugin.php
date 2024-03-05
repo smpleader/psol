@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'report_tree',
     'name' => 'Plugin report tree of note',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];

@@ -14,7 +14,9 @@ class Installer
             'solution' => 'psol',
             'folder_name' => 'version',
             'name' => 'Plugin version',
-            'require' => []
+            'dependencies' => [
+                'pnote'
+            ]
         ];
     }
     

@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'version',
     'name' => 'Plugin version',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];

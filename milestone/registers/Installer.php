@@ -14,7 +14,9 @@ class Installer
             'solution' => 'psol',
             'folder_name' => 'milestone',
             'name' => 'Plugin milestone',
-            'require' => []
+            'dependencies' => [
+                'pnote'
+            ]
         ];
     }
 

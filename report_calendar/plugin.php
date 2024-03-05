@@ -5,5 +5,7 @@ return [
     'solution' => 'psol',
     'folder_name' => 'report_calendar',
     'name' => 'Plugin report calendar',
-    'required' => []
+    'dependencies' => [
+        'pnote'
+    ]
 ];
