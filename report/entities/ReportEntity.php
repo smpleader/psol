@@ -1,12 +1,4 @@
 <?php
-/**
- * SPT software - Entity
- * 
- * @project: https://github.com/smpleader/spt
- * @author: Pham Minh - smpleader
- * @description: Just a basic entity
- * 
- */
 
 namespace App\psol\report\entities;
 
@@ -72,7 +64,7 @@ class ReportEntity extends Entity
             return false;
         }
 
-        if(empty($data['title'])) 
+        if(isset($data['title']) && empty($data['title'])) 
         {
             $this->error = "Title can't empty";
             return false;
